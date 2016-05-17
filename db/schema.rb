@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513025431) do
+ActiveRecord::Schema.define(version: 20160517023045) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "category_id"
+    t.string   "photo"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "matches", force: :cascade do |t|
@@ -28,6 +38,18 @@ ActiveRecord::Schema.define(version: 20160513025431) do
 
   add_index "matches", ["object_one_id"], name: "index_matches_on_object_one_id"
   add_index "matches", ["object_two_id"], name: "index_matches_on_object_two_id"
+
+  create_table "objectos", force: :cascade do |t|
+    t.string   "name"
+    t.text     "photo"
+    t.integer  "category_id"
+    t.text     "features"
+    t.date     "post_on"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "objectos", ["category_id"], name: "index_objectos_on_category_id"
 
   create_table "sectors", force: :cascade do |t|
     t.string   "name"
