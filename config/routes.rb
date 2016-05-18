@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :accounts
   resources :items
+  devise_for :users
+  resources :users
+  
   root 'welcome#index'
 
   resources :matches
   resources :categories
-  resources :users
   resources :sectors
+  get 'welcome/error'
 
   
   # The priority is based upon order of creation: first created -> highest priority.

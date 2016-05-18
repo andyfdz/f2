@@ -1,7 +1,31 @@
-<h1>New User</h1>
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
 
-<h3> Esta es la pagina para crear un nuevo usuario, se tiene el formularió para hacerlo bonito xD :P </h3>
+<%= form_for(@user) do |f| %>
 
-<%= render 'form' %>
+ <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_area :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :sector_id %><br>
+    <%= f.select :sector_id, Sector.all.collect{|s| [s.id, s.name]} %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 
-<%= link_to 'Back', users_path %>
+ <% end %>
