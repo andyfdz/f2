@@ -5,9 +5,15 @@
 <p> Este es un link para agregar un nuevo usuario</p>
 
 <div> <!-- Agregar el boton -->
-	<%= link_to "New user", new_user_path %> <br>
+	<%= link_to "Create account", new_user_path %> <br>
+</div>
 
-	<%= link_to "Log in",  new_user_session_path %>
+<div>
+	<% if current_user %>
+    Welcome <%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+	<% else %>
+	    <%= link_to 'Login', new_user_session_path %>
+	<% end %>
 </div>
 
 

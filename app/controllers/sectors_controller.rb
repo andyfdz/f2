@@ -1,5 +1,7 @@
 class SectorsController < ApplicationController
   before_action :set_sector, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+
 
   # GET /sectors
   # GET /sectors.json
@@ -15,6 +17,7 @@ class SectorsController < ApplicationController
   # GET /sectors/new
   def new
     @sector = Sector.new
+    @user = User.new
   end
 
   # GET /sectors/1/edit

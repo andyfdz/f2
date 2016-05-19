@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, except: [:sign_in, :new, :create]
 
   def index
+    @users = User.all
   end
 
   def show
