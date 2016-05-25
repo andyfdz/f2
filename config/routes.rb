@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :categories
   resources :sectors
   get 'welcome/error'
+  get 'random' =>"items#random"
 
   
   # The priority is based upon order of creation: first created -> highest priority.

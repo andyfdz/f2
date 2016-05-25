@@ -1,6 +1,39 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
-<p> Este es la pagina para cerra la sesión </p>
-<p> también es la pagina para editar el password ? </p>
-<p> también es la pagina que te despues de hacer sesion o log in</p>
+<p>En esta página te muestran la información de cada usuario dependiendo el ID</p>
+
+<div>
+	Name
+</div>
+<div>
+	<%=@user.name%>
+</div>	<br>
+
+<div>
+	Last name
+</div>
+<div>
+	<%=@user.last_name%>
+</div>	<br>
+
+<div>
+	Username
+</div>
+<div>
+	<%=@user.username%>
+</div>	<br>
+
+<div>
+	Sector
+</div>
+<div>
+	<%=@user.sector_id%>
+</div>	<br>
+
+<div>
+	Photo
+</div>
+<div>
+	<%=@user.photo%>
+</div>	<br>
+
+

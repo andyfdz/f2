@@ -1,4 +1,6 @@
 <%= form_for(@item) do |f| %>
+
+
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -21,13 +23,14 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.text_field :category_id %>
+    <%= f.select :category_id ,Category.all.collect{|c|[c.name, c.id]} %>
   </div>
   <div class="field">
     <%= f.label :characteristics %><br>
-    <%= f.text_area :characteristics %>
+    <%= f.text_area :characteristics %>  <!-- Sony, has el text mas grande -->
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

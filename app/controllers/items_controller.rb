@@ -1,10 +1,15 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :except => [:index]
 
   # GET /items
   # GET /items.json
   def index
     @items = Item.all
+  end
+
+  def random
+    @item = Item.all.sample
   end
 
   # GET /items/1
