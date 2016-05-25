@@ -1,24 +1,39 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<p>En esta página te muestran la información de cada usuario dependiendo el ID</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div>
+	Name
+</div>
+<div>
+	<%=@user.name%>
+</div>	<br>
 
-<p>
-  <strong>Age:</strong>
-  <%= @user.age %>
-</p>
+<div>
+	Last name
+</div>
+<div>
+	<%=@user.last_name%>
+</div>	<br>
 
-<p>
-  <strong>Sector:</strong>
-  <%= @user.sector_id %>
-</p>
+<div>
+	Username
+</div>
+<div>
+	<%=@user.username%>
+</div>	<br>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div>
+	Sector
+</div>
+<div>
+	<%=@user.sector_id%>
+</div>	<br>
+
+<div>
+	Photo
+</div>
+<div>
+	<%=@user.photo%>
+</div>	<br>
+
+

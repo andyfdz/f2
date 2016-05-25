@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   resources :items
+  devise_for :users
+  resources :users
+  
   root 'welcome#index'
 
   resources :matches
   resources :categories
-  resources :users
   resources :sectors
+  get 'welcome/error'
+  get 'random' =>"items#random"
 
   
   # The priority is based upon order of creation: first created -> highest priority.
