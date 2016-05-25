@@ -49,5 +49,7 @@ gem 'devise'
 
 gem 'omniauth-facebook'
 
+gem 'therubyracer'
+
 
 
