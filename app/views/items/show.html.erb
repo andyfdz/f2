@@ -7,7 +7,7 @@
 
 <p>
   <strong>Photo:</strong>
-  <%= @item.photo %>
+  <%= image_tag(@item.photo)if @item.photo? %>
 </p>
 
 <p>
