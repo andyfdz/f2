@@ -7,8 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
 
+<% if user_signed_in? %>
+  <li> Has iniciado sesion como: <%= current_user.email %>  </li>
+  <li> <a href="<%= destroy_user_session_path %>" data-method="delete">Salir </a></li>
+<% end %>
 <%= yield %>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1729656273975958',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
 
 </body>
 </html>

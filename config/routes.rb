@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   resources :items
-  devise_for :users
+  
+  devise_for :users, controllers:{
+    #no me hackeo el chavo 
+  sessions: "users/sessions",
+  registrations: "users/registrations", 
+  omniauth_callbacks: "users/omniauth_callbacks"
+  }
+
   resources :users
   
   root 'welcome#index'
