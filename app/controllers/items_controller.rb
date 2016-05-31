@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
 
   def random
     @item = Item.all.sample
+    @like = Like.new item_id: @item.id, user_id: current_user.id
   end
 
   # GET /items/1

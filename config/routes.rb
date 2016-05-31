@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   resources :sectors
   get 'welcome/error'
   get 'random' =>"items#random"
+  resources :likes, only: [:create]
+
 
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,1 +1,17 @@
+
+<p id="notice"><%= notice %></p>
+
 <p> Aquí muestra un solo item de toda la lista</p>
+
+<%= @item.name %>
+
+<%= image_tag @item.photo %>
+
+<p> el boton de no me gusta (dislike) tiene que ser con un link a la misma pagina para que cargue otro <p>
+
+	<%= link_to "No me gusta",  random_path %>
+
+<p> el boton de me gusta</p>
+
+<%= link_to 'Me gusta', likes_path(like: {user_id: current_user.id, item_id: @item.id}), method: :post %>
+
