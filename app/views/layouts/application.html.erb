@@ -15,11 +15,42 @@
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-
-
-
 </head>
 <body>
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Trueque</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link 1 <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link 2</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">
+            <% if user_signed_in? %>
+            <li> Has iniciado sesion como: <%= current_user.email %>  </li>
+            <li> <a href="<%= destroy_user_session_path %>" data-method="delete">Salir </a></li>
+            <% end %>
+          </a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 <% if user_signed_in? %>
   <li>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
@@ -30,10 +61,8 @@
   </li>
 <% end %>
 
-<% if user_signed_in? %>
-  <li> Has iniciado sesion como: <%= current_user.email %>  </li>
-  <li> <a href="<%= destroy_user_session_path %>" data-method="delete">Salir </a></li>
-<% end %>
+
+
 <%= yield %>
 <script>
   window.fbAsyncInit = function() {
@@ -53,6 +82,17 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 
+<footer class="col-md-12 text-center">
+  <div class="container">
+    <div class="footer_logo" align="middle">
+      <img id="logo-fot" src="carpeta/nombre.jpg" alt="logotrueque" class="img-responsive">
+    </div>
+    <div class="copyright_text">
+      <p>&copy; Trueque App. Todos los derechos reservados por<br>
+      <%= link_to "Sobre Nosotras", welcome_sobre_nosotras_path %> 
+    </div>
+  </div>
+</footer>
 
 
 </body>

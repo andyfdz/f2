@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :users
   
-  root 'items#new'
+  root 'welcome#index'
 
   resources :matches
   resources :categories
@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'welcome/error'
   get 'random' =>"items#random"
   resources :likes, only: [:create]
+  get 'welcome/sobre_nosotras'
 
 
   
