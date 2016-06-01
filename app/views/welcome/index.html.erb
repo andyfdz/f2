@@ -4,21 +4,33 @@
 
 <p> Este es un link para agregar un nuevo usuario</p>
 
-<div> <!-- Agregar el boton -->
-	<%= link_to "Create account", new_user_path %> <br>
+<div class="row">
+
+  <div class="col-md-6">
+  	
+  	TRUEQUE
+
+	Tu plataforma Aquibusant voluptate et eliquibus dent, sunt atquodia num dio. Et venet latestior sit estrum quiatia conse Tium et re voluptat si nobis eligene nos re, ut faceped earum volupis dolut es alit officide velendae sinvent.
+
+  </div>
+	
+
+	<div class="col-md-6">
+
+		<div type="button" class="btn btn-default btn-lg col-md-3"> 
+
+			<%= link_to "Create account", new_user_path %> 
+		</div>
+
+
+		<div type="button" class="btn btn-default btn-lg col-md-3">
+			<% if current_user %>
+		    Welcome <%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+			<% else %>
+			    <%= link_to 'Login', new_user_session_path %>
+			<% end %>
+		</div>
+
+	</div>
+
 </div>
-
-<div>
-	<% if current_user %>
-    Welcome <%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-	<% else %>
-	    <%= link_to 'Login', new_user_session_path %>
-	<% end %>
-</div>
-
-
-
-<br>
-
-<p>Welcome#index</p>
-<p>Find me in app/views/welcome/index.html.erb</p>
