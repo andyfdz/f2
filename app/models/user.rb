@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 		name: auth.extra.raw_info.name, 
 	    provider: auth.provider, 
 	    uid: auth.uid, 
-	    image: auth.info.image,
+	    photo: auth.info.image,
 	    email: auth.info.email,
 			password: Devise.friendly_token[0,20])
 	end

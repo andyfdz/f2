@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :users
   
-  root 'welcome#index'
+  root 'items#new'
 
   resources :matches
   resources :categories
