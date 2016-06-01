@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+  get  'pages/get_address'
+
+
   resources :items
   
   devise_for :users, controllers:{
@@ -11,6 +15,8 @@ Rails.application.routes.draw do
   resources :users
   
   root 'welcome#index'
+
+
 
   resources :matches
   resources :categories

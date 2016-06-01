@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
-  mount_uploader :photo, UserPhotoUploader
+ reverse_geocoded_by :latitude, :longitude
+ after_validation :reverse_geocode
+ mount_uploader :photo, UserPhotoUploader
   	def self.find_for_facebook_oauth(auth)
 		user = User.where(provider: auth.provider, uid: auth.uid).first # The User was found in our database
 		return user if user
