@@ -1,16 +1,25 @@
-<h2>Log in</h2>
+<div class="col-md-12 text-center center-block">
+
+<h1>TRUEQUE</h1>
+
+<h3>Log in</h3>
 
 <form class="form-inline">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-  <div class="field form-group">
-    <label class="sr-only" for="exampleInputEmail3"><%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %></label>
+
+  <div class="field form-group col-md-12"">
+    <label class="sr-only" for="exampleInputEmail3">
+
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+
+    </label>
     <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
   </div>
 
 
-  <div class="field form-group">
+  <div class="field form-group col-md-12">
     <label class="sr-only" for="exampleInputPassword3"><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></label>
     <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
@@ -25,11 +34,13 @@
 
 <div class="actions">
 <%= f.submit "Log in" , class:"btn btn-default" %> 
-
 </div>
-  
+
 </form>
 
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="true" data-auto-logout-link="false"></div>
+
+</div>
 
 <!-- 
 
