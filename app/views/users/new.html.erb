@@ -15,6 +15,15 @@
     <%= f.label :username %><br>
     <%= f.text_field :username %>
   </div>
+    <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude, readonly: true, id: 'latitude' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude, readonly: true, id: 'longitude' %>
+  </div>
   <div class="field">
     <%= f.label :photo %><br>
     <%= f.file_field :photo %>
@@ -36,11 +45,25 @@
     <%= f.label :sector_id %><br>
     <%= f.select :sector_id, Sector.all.collect{|s| [s.name, s.id]} %>
   </div>
-
-
   
   <div class="actions">
     <%= f.submit %>
   </div>
 
  <% end %>
+ <script>
+
+function getLocation() 
+{
+  if (navigator.geolocation) 
+  { 
+    navigator.geolocation.getCurrentPosition(function(position){
+      document.getElementById('latitude').value = position.coords.latitude;
+      document.getElementById('longitude').value = position.coords.longitude;
+    });
+  } 
+}
+ 
+window.onload = getLocation;
+
+</script>

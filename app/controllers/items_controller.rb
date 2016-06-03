@@ -5,7 +5,16 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
+    #if Administrador
     @items = Item.all
+  #else
+    #@items=[]
+    #User.all.each do |u|
+      #if u.distance(current_user)<1000
+        #@items+=u.items 
+    #end
+    #@items
+    #end  
   end
 
   def random

@@ -53,5 +53,6 @@ gem 'omniauth-facebook'
 
 gem 'therubyracer'
 
+gem 'cancancan'
 
 

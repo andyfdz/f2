@@ -25,5 +25,8 @@ class User < ActiveRecord::Base
 	    email: auth.info.email,
 			password: Devise.friendly_token[0,20])
 	end
+	def distance(other_user)
+		10
+	end
 end
 
