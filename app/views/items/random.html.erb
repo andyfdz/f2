@@ -1,17 +1,56 @@
 
+
+
 <p id="notice"><%= notice %></p>
 
-<p> Aquí muestra un solo item de toda la lista</p>
 
-<%= @item.name %>
+<div class="col-md-12 text-center">
+	<h1>
+	<%= @item.category_id %>
+	</h1>
+</div>
 
-<%= image_tag @item.photo %>
 
-<p> el boton de no me gusta (dislike) tiene que ser con un link a la misma pagina para que cargue otro <p>
 
-	<%= link_to "No me gusta",  random_path %>
 
-<p> el boton de me gusta</p>
+<div class="col-md-12 text-center">
+	<div class="img-responsive">
+		<%= image_tag @item.photo %>
+	</div>
+</div>
 
-<%= link_to 'Me gusta', likes_path(like: {user_id: current_user.id, item_id: @item.id}), method: :post %>
+<br>
 
+<div class="col-md-12 text-center">
+	<h1> <%= @item.name %> </h1>
+</div>
+
+
+
+<section="botones">
+	<div class="row">
+
+		<div class="col-md-offset-4 col-md-1" > <!-- NO -->
+			<%= link_to(random_path) do %> 
+				<div class="col-md-offset-4">
+					<span class="glyphicon glyphicon-remove-sign"></span>
+				</div>
+			<%end%>
+		</div>
+
+		<div class="col-md-offset-2 col-md-1"> <!-- SI -->
+			<%= link_to(likes_path(like: {user_id: current_user.id, item_id: @item.id}),method: :post)  do %> 
+				<div class="col-md-offset-4">
+					<span class="glyphicon glyphicon-heart"></span>
+				</div>
+			<%end%>
+		</div>
+
+	</div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>

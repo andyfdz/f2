@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+  get  'pages/get_address'
+
+
   resources :items
   
   devise_for :users, controllers:{
@@ -12,12 +16,15 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
+
+
   resources :matches
   resources :categories
   resources :sectors
   get 'welcome/error'
   get 'random' =>"items#random"
   resources :likes, only: [:create]
+  get 'welcome/sobre_nosotras'
 
 
   

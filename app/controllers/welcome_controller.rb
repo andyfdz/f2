@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
 
   def error
   end
+
+  def sobre_nosotras
+  end
+
 end
