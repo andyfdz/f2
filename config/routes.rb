@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
 
 
-  resources :matches
+  resources :matches, except: [:new, :create, :edit, :update, :delete]
   resources :categories
   resources :sectors
   get 'welcome/error'

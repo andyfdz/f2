@@ -1,16 +1,11 @@
 
-
-
 <p id="notice"><%= notice %></p>
-
 
 <div class="col-md-12 text-center">
 	<h1>
-	<%= @item.category_id %>
+	<%= @item.category.name %>
 	</h1>
 </div>
-
-
 
 <div class="col-md-12 text-center">
 	<div class="img-responsive">
@@ -22,8 +17,8 @@
 
 <div class="col-md-12 text-center">
 	<h1> <%= @item.name %> </h1>
+	<p> <%= @item.characteristics %> </p>
 </div>
-
 
 
 <section="botones">
