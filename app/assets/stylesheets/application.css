@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+.navf {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.tf {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+}
+
+.tformfont {
+	font-family: 'Open Sans-semi bold', sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+
+.WFdiv {
+	margin-bottom: 30px;
+}
+
+.Wdiv{
+	background-color:#28ABE3;
+}
+
+.t3 {
+
+	font-family: 'Bree Serif', serif;	
+
+} 
+
+.btnW {
+
+	font-family: 'Bree Serif', serif;
+	margin-top: 20px;	
+} 
+
+.Formbtn {
+
+	font-family: 'Open Sans-semi bold', sans-serif;
+	text-transform: uppercase;
+	margin-top: 10px;	
+} 
