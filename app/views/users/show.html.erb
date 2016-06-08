@@ -1,39 +1,16 @@
 
-<p>En esta página te muestran la información de cada usuario dependiendo el ID</p>
-
-<div>
-	Name
+<section class="container">
+	<div class="row">
+		<div class="col-md-6 text-right">
+			<p> <%=image_tag(@user.photo)%></p>
+		</div>
+		<div class="col-md-6">
+			<div class="field">
+			<h3> <%=@user.name%> </h3>
+			<p> <%=@user.last_name%> </p>
+			<p> <%=@user.sector%> </p>
+		</div>
+	</div>
 </div>
-<div>
-	<%=@user.name%>
-</div>	<br>
-
-<div>
-	Last name
-</div>
-<div>
-	<%=@user.last_name%>
-</div>	<br>
-
-<div>
-	Username
-</div>
-<div>
-	<%=@user.username%>
-</div>	<br>
-
-<div>
-	Sector
-</div>
-<div>
-	<%=@user.sector_id%>
-</div>	<br>
-
-<div>
-	Photo
-</div>
-<div>
-	<%=image_tag(@user.photo)%>
-</div>	<br>
-
+</section>
 

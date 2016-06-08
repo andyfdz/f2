@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<section class="container text-center">
+
+<p id="notice text-left"><%= notice %></p>
+
+<h2>
+  <strong>Name:</strong> <br>
   <%= @item.name %>
-</p>
+</h2>
 
 <p>
-  <strong>Photo:</strong>
+  <strong>Photo:</strong> <br>
   <%= image_tag(@item.photo)if @item.photo? %>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong>Category:</strong> <br>
   <%= @item.category %>
 </p>
 
 <p>
-  <strong>Characteristics:</strong>
+  <strong>Characteristics:</strong> <br>
   <%= @item.characteristics %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |
 <%= link_to 'Back', items_path %>
+
+</section>

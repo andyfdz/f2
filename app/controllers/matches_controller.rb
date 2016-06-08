@@ -4,7 +4,7 @@ class MatchesController < ApplicationController
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.all
+    @matches = Match.all.joins(:items)
   end
 
   # GET /matches/1
@@ -28,6 +28,8 @@ class MatchesController < ApplicationController
 
     respond_to do |format|
       if @match.save
+        Matchmailer.new_match(@match.item_one.user).deliver
+        Matchmailer.new_match(@match.item_two.user).deliver
         format.html { redirect_to @match, notice: 'Match was successfully created.' }
         format.json { render :show, status: :created, location: @match }
       else

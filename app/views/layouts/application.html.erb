@@ -62,27 +62,18 @@
         </li>
         <% end %>
 
-        <li><a href="#"> Trueque</a></li>
-        <li><a href="#"> Objetos</a></li>
+        <li><%= link_to('Trueque', random_path) %></li>
+        <li><%= link_to('+Objeto', new_item_path) %></li>
         <li><a href="#"> Mis match</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
           <div>
             <% if user_signed_in? %>
-            <li>
-            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-            </li>
+            <li class="vertical-space"> Has iniciado sesion como: <%= current_user.email %>  </li>  <!-- Puede modificar esto para que tenga un marge top y quede centrado :D -->
+            <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </li>
             <% else %>
-            <li>
-            <%= link_to('Login', new_user_session_path)  %>  
-            </li>
-            <% end %>
-          </div>
-          <div>
-            <% if user_signed_in? %>
-            <li> Has iniciado sesion como: <%= current_user.email %>  </li>
-            <li> <a href="<%= destroy_user_session_path %>" data-method="delete">Salir </a></li>
+            <li> <%= link_to('Login', new_user_session_path)  %>  </li>
             <% end %>
           </div>
         </li>

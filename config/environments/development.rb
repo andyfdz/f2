@@ -50,7 +50,7 @@ ActionMailer::Base.smtp_settings = {
 :port => 587,
 :authentication => :plain,
 :domain => 'gmail.com',
-:user_name => "jesusdesafiolatam@gmail.com",
-:password => "desafiolatam"
+:user_name => "truequelatam@gmail.com",
+:password => "desafio123"
 }
 end
