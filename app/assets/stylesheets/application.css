@@ -14,9 +14,27 @@
  *= require_self
  */
 
-.navf {
-	font-family: 'Open Sans', sans-serif;
+
+#header {
+    float: left;
+    background: #28ABE3;
+    height: 100px;
+    width: 100%;
+    padding: 0 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
+
+
+#main_nav {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	background: #28ABE3;
+    position: relative;
+}
+
 
 .tf {
 	font-family: 'Open Sans', sans-serif;
