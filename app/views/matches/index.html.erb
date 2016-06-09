@@ -4,7 +4,7 @@
 
 <h1>Listing Matches</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Object one</th>
@@ -16,10 +16,12 @@
   <tbody>
     <% @matches.each do |match| %>
       <tr>
-        <td><%= match.object_one_id %></td>
-        <td><%= match.object_two_id %></td>
+        <td><%= match.item_one.user.email %></td>
+        <td><%= image_tag match.item_one.photo %></td>
+        <td><%= match.item_two.user.email %></td>
+         <td><%= image_tag match.item_two.photo %></td>
+
         <td><%= link_to 'Show', match %></td>
-        <td><%= link_to 'Edit', edit_match_path(match) %></td>
         <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
