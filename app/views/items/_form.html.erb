@@ -14,24 +14,26 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div id="TruForm2" class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div id="TruForm2" class="field">
     <%= f.label :photo %><br>
     <%= f.file_field :photo %>
   </div>
-  <div class="field">
+  <div id="TruForm2" class="field">
     <%= f.label :category_id %><br>
     <%= f.select :category_id ,Category.all.collect{|c|[c.name, c.id]} %>
   </div>
-  <div class="field">
+  <div id="TruForm2" class="field">
     <%= f.label :characteristics %><br>
     <%= f.text_area :characteristics %>  <!-- Sony, has el text mas grande -->
   </div>
- 
-    <%= f.submit class:"Formbtn btn btn-default btn-lg col-md-2"  %>
+    
+    
+
+    <%= f.submit class:"Formbtn btn btn-default btn-lg col-md-4. btn.sharp  "  %>
   
 <% end %>
 
