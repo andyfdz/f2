@@ -18,9 +18,9 @@
 #header {
     float: left;
     background: #28ABE3;
-    height: 100px;
+    height: 80px;
     width: 100%;
-    padding: 0 80px;
+    padding: 0 40px;
     position: fixed;
     top: 0;
     left: 0;
@@ -28,13 +28,62 @@
 }
 
 
-#main_nav {
-	font-family: 'Open Sans', sans-serif;
-	color: white;
-	background: #28ABE3;
-    position: relative;
+#contblue {
+	background-color: #28ABE3;    
 }
 
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgba(40, 171, 227, 1);
+    border-width: 0px;
+    border-radius: 0px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(40, 171, 227, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(40, 171, 227, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(44, 160, 209, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #2ca0d1;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #2ca0d1;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #2ca0d1;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #28abe3;
+}
+
+#navimg {
+	width: 80px;
+    height: 45px;
+    padding-top: 0px;
+}
+
+#logo {
+	padding: 0px;
+	padding-top: 5px;
+	padding-left: 1em;
+	padding-right: 2.5em;
+}
 
 .tf {
 	font-family: 'Open Sans', sans-serif;
@@ -50,6 +99,7 @@
 
 .WFdiv {
 	margin-bottom: 30px;
+	padding: 0 40px;
 }
 
 .Wdiv{
