@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
+    redirect_to welcome_error_path and return
     #if Administrador
     @items = Item.all
   #else
