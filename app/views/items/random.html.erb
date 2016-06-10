@@ -7,9 +7,9 @@
 	</h1>
 </div>
 
-<div class="col-md-12 text-center">
-	<div class="img-responsive">
-		<%= image_tag @item.photo %>
+<div class="col-md-12">
+	<div>
+		<%= image_tag @item.photo,id:"imagen-random"%>
 	</div>
 </div>
 
@@ -27,7 +27,7 @@
 		<div class="col-md-offset-4 col-md-1" > <!-- NO -->
 			<%= link_to(random_path) do %> 
 				<div class="col-md-offset-4">
-					<span class="glyphicon glyphicon-remove-sign"></span>
+					<h1 class="glyphicon glyphicon-remove-sign"></h1>
 				</div>
 			<%end%>
 		</div>
@@ -35,7 +35,7 @@
 		<div class="col-md-offset-2 col-md-1"> <!-- SI -->
 			<%= link_to(likes_path(like: {user_id: current_user.id, item_id: @item.id}),method: :post)  do %> 
 				<div class="col-md-offset-4">
-					<span class="glyphicon glyphicon-heart"></span>
+					<h1 class="glyphicon glyphicon-heart"></h1>
 				</div>
 			<%end%>
 		</div>
