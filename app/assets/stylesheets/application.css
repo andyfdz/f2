@@ -115,6 +115,7 @@
     &:hover {
       background: darken($accent, 15%);
     }
+}
 
 
 
@@ -159,4 +160,32 @@
 
 #footerT {
 	padding-top: 50px;
+}
+
+#corazon{
+    font-size:30px;
+}
+.glyphicon{
+    font-size:30px;
+}
+#imagen-random{
+    display: block;
+    margin:0 auto;
+    width: 600px;
+    height: auto;
+}
+.vertical-space{
+    margin-top: 1.25em;
+}
+#imagen-1{
+    display: block;
+    margin:0 auto;
+    width: 600px;
+    height: auto;
+}
+#imagen-2{
+    display: block;
+    margin:0 auto;
+    width: 600px;
+    height: auto;
 }
