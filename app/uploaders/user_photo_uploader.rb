@@ -18,7 +18,7 @@ class UserPhotoUploader < CarrierWave::Uploader::Base
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
-    "http://zweigstelle-artshop.de/WebRoot/Store21/Shops/3a670489-e1f3-4b22-8771-37f6de488bff/5569/E2C2/8BB0/80CF/9A57/0A48/355B/350D/Saed_SORRRY_500_ml.jpg"
+    "http://hackersworld.org/images/profile.png"
   end
   #   # For Rails 3.1+ asset pipeline compatibility:
   #   # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))

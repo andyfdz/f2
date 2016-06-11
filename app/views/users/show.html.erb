@@ -11,6 +11,16 @@
 			<p> <%=@user.sector%> </p>
 		</div>
 	</div>
-</div>
+
+	<div class="row">
+		<div class="col-md-12 text-center">
+				<ul id="lista2">
+				<% @items.each do |item| %> 
+					<li><%= item.name %></li>
+					<!--<li><%= item.photo %></li> -->
+				<% end %>
+				</ul>
+		</div>
+	</div>
 </section>
 
